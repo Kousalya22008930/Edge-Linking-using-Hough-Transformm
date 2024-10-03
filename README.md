@@ -32,7 +32,7 @@ plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
 plt.title('Input Image')
 plt.axis('off')
 ```
-![image](https://github.com/user-attachments/assets/bd5c8186-a119-4171-91c0-c6111e099d23)
+![image](https://github.com/user-attachments/assets/afee62fb-6ef6-4c20-bb28-c724099fed95)
 
 ### Grayscale image
 ```python
@@ -41,7 +41,7 @@ plt.imshow(gray_image, cmap='gray')
 plt.title('Grayscale Image')
 plt.axis('off')
 ```
-![image](https://github.com/user-attachments/assets/8c3d00a6-b4f9-4c87-9d82-6d32ef828f95)
+![image](https://github.com/user-attachments/assets/fd312eb4-709e-44cb-94c6-2dd3592342e3)
 
 ### Canny Edge detector output
 ```python
@@ -50,11 +50,11 @@ plt.imshow(canny_edges, cmap='gray')
 plt.title('Canny Edge Detection')
 plt.axis('off')
 ```
-![image](https://github.com/user-attachments/assets/32a3ee35-57bd-4635-8609-abe547d26538)
+![image](https://github.com/user-attachments/assets/d8e3e77e-0654-4ff3-af8e-a17a7afd009d)
 
 ### Display the result of Hough transform
 ```python
-lines = cv2.HoughLinesP(canny_edges, rho=1, theta=np.pi/180, threshold=100, minLineLength=50, maxLineGap=10)
+lines = cv2.HoughLinesP(canny_edges, rho=1, theta=np.pi/180, threshold=100, minLineLength=100, maxLineGap=100)
 output_image = image.copy()
 
 if lines is not None:
@@ -65,7 +65,7 @@ plt.imshow(cv2.cvtColor(output_image, cv2.COLOR_BGR2RGB))
 plt.title('Hough Transform - Line Detection')
 plt.axis('off')
 ```
-![image](https://github.com/user-attachments/assets/2eab82dd-b547-4806-a3cd-c419a620abed)
+![image](https://github.com/user-attachments/assets/5ca38a81-799e-4498-a9bd-1c6beec662c8)
 
 ## Result
 Thus,The Python program to detect the lines using Hough Transform run successfully.
